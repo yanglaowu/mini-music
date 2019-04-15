@@ -1,0 +1,7 @@
+<!--pages/player/index.wxml-->
+<view class="container">
+  <max-player
+    bind:back="_handleBack"
+    player="{{curPlayer}}"
+    playerList="{{playerList}}"></max-player>
+</view>

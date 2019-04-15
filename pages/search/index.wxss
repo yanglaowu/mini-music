@@ -1,0 +1,7 @@
+/* pages/search/index.wxss */
+.container-view {
+  padding: 0 15px;
+  color: white;
+  background: linear-gradient(#ED231F,#281718, #231616);
+}
+

@@ -1,0 +1,22 @@
+/* components/search-i/index.wxss */
+.i-search {
+  display: flex;
+  align-items: center;
+  background: #8C1010;
+  border-radius: 20px;
+  padding: 3px 15px;
+}
+.i-search-icon > image {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+.i-search-input {
+  padding-left: 5px;
+  font-size: 12px;
+  width: 100%;
+}
+.i-search-placeholder {
+  font-size: 10px;
+  color: #D5BDBC;
+}

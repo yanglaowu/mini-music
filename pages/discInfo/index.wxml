@@ -1,0 +1,33 @@
+<!--pages/discInfo/index.wxml-->
+<view class="container">
+  <view class="custom-navigation" style="background-image:url({{disc.imgurl}})">
+    <view catch:tap="_handleBack" class="back-icon" style="top:{{sysInfo.statusBarHeight}}px">
+      <image mode="aspectFit" src="../../icon/fanhui@2x.png"></image>
+    </view>
+    <view class="signer-name" >{{disc.dissname}}</view>
+  </view>
+  <view class="song-list">
+    <view catch:tap="_handlePlayAll" class="play-all">
+      <view class="play-all-l">
+        <image mode="aspectFit" src="../../icon/play@2x.png"></image>
+      </view>
+      <view class="play-all-r">
+        播放全部
+      </view>
+    </view>
+    <view wx:for="{{songs}}" wx:key="index" catch:tap="_handlePlay" data-song="{{item}}" class="song-item">
+      <view class="song-item-left">
+        <view class="song-item-name">{{item.name}}</view>
+        <view class="song-item-desc">
+          {{item.singer}}-{{item.album}}
+        </view>
+      </view>
+      <view class="song-item-right">
+        <image mode="aspectFit" src="../../icon/play@2x.png"></image>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<mini-player wx:if="{{player}}" player="{{player}}"></mini-player>

@@ -1,0 +1,40 @@
+<!--pages/index/index.wxml-->
+<view class="container container-view">
+  <!-- 搜索 -->
+  <view class="hot-search">
+    <i-search bind:tap="_handleSearch"></i-search> 
+  </view>
+  <!-- 热门推荐 -->
+  <view class="hot-signer" wx:if="{{signer.length}}">
+    <view class="hot-signer-title">
+      <view class="hot-signer-title-t">热门歌手</view>
+      <view catch:tap="_handleMoreSigner" class="hot-signer-title-m">更多 >></view>
+    </view>
+    <view class="hot-signer-list">
+      <view class="signer-item" wx:for="{{signer}}" wx:key="index" catch:tap="_handleSignerInfo" data-signer="{{item}}">
+        <image class="signer-item-avatar" src="{{item.avatar}}"></image>
+        <view class="signer-item-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 热门歌单 -->
+  <view class="hot-disc" wx:if="{{disc.length}}">
+    <view class="hot-signer-title">
+      <view class="hot-signer-title-t">热门歌单</view>
+    </view>
+    <view class="hot-disc-list">
+      <view wx:for="{{disc}}" wx:key="index" catch:tap="_handleDiscInfo" data-disc="{{item}}" class="disc-item">
+        <view class="disc-item-img">
+          <image src="{{item.imgurl}}"></image>
+        </view>
+        <view class="disc-item-desc">
+          <view class="disc-item-desc-n">{{item.creator.name}}</view>
+          <view class="disc-item-desc-i">{{item.dissname}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>
+
+<mini-player wx:if="{{player}}" player="{{player}}"></mini-player>

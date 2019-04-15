@@ -1,0 +1,23 @@
+/* components/mini-player/index.wxss */
+.mini-player {
+  position: fixed;
+  height: 27px;
+  top: 150px;
+  left: 0;
+  width: 27px;
+  background: #fff;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  padding: 2px 2px 2px 5px;
+}
+.mini-player > image {
+  width:27px;
+  height:27px;
+  border-radius:50%;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0%{transform: rotate(0)}
+  100%{transform: rotate(360deg)}
+}

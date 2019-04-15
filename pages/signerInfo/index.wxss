@@ -1,0 +1,77 @@
+/* pages/signerInfo/index.wxss */
+.custom-navigation {
+  height: 300px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.back-icon {
+  position:absolute;
+  left:15px;
+  z-index: 1;
+}
+.back-icon > image {
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+.signer-name {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size:24px;
+}
+
+.song-list {
+  overflow: auto;
+}
+.play-all {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 30px;
+  border-bottom: 1px solid #F6F6F6;
+  color: #9C9C9C;
+}
+.play-all-l {
+  width: 35px;
+  height: 35px;
+  padding-right: 10px;
+}
+.play-all-l > image {
+  width: 100%;
+  height: 100%;
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  border-bottom: 1px solid #F6F6F6;
+}
+.song-item-left {
+  width: 80%;
+}
+.song-item-right {
+  width: 20%;
+  text-align: right;
+}
+.song-item-right > image {
+  width: 20px;
+  height: 20px;
+}
+.song-item-name {
+  font-size: 14px;
+  color: #626262;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.song-item-desc {
+  color: #949494;
+  font-size: 10px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

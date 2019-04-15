@@ -1,0 +1,214 @@
+/* components/player/index.wxss */
+.max-player {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 150;
+    background: #222;
+}
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(20px);
+}
+.top {
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 50;
+}
+.back > image {
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+.title {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 40px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 18px;
+  color: #fff;
+}
+.subtitle {
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.middle {
+  position: fixed;
+  width: 100%;
+  bottom: 170px;
+  white-space: nowrap;
+  font-size: 0;
+}
+.middle-l {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 80%;
+}
+.cd-wrapper {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 80%;
+  box-sizing: border-box;
+  height: 100%;
+}
+.player-info {
+  width: 80%;
+  margin: 30px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+.player-info > .signer-name {
+  height:30px;
+  line-height:30px;
+  font-size:24px;
+  color:#fff;
+}
+.player-info > .player {
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color:#fff;
+}
+.cd {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:#313131;
+}
+.cd > image {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 7px solid rgba(0,0,0,0.7);
+  
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.time {
+  color: #fff;
+  font-size: 12px;
+  flex: 0 0 30px;
+  line-height: 30px;
+  width: 30px;
+}
+.time-l {
+  text-align: left;
+}
+.time-r {
+  text-align: right;
+}
+.progress-bar-wrapper {
+  flex: 1;
+}
+.progress-bar {
+  height: 30px;
+}
+.bar-inner {
+  position: relative;
+  top: 13px;
+  height: 2px;
+  background: #fff;
+}
+.progress {
+  position: absolute;
+  height: 100%;
+  background: #E30B20;
+}
+.progress-btn-wrapper {
+  position: absolute;
+  left: -8px;
+  top: -13px;
+  width: 30px;
+  height: 30px;
+}
+.progress-btn {
+  position: relative;
+  top: 10px;
+  left: 7px;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E30B20;
+}
+.operators {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+.icon {
+  flex: 1
+}
+.icon-left {
+  text-align: left;
+}
+.icon-left > image {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+.icon-center {
+  text-align: center;
+  padding: 0 20px;
+}
+.icon-center > image {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+.icon-right {
+  text-align: right;
+}
+.icon-right > image {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+.play {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0%{transform: rotate(0)}
+  100%{transform: rotate(360deg)}
+}
+    
+      
+    
+      

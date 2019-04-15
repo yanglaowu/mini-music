@@ -1,0 +1,18 @@
+<!--pages/signer/index.wxml-->
+<view  class="container container-view">
+  <!-- 搜索 -->
+  <view class="hot-search">
+    <i-search bind:tap="_handleSearch"></i-search> 
+  </view>
+  <!-- 热门推荐 -->
+  <view class="hot-signer">
+    <view class="hot-signer-list">
+      <view class="signer-item" wx:for="{{signer}}" wx:key="index" catch:tap="_handleSignerInfo" data-signer="{{item}}">
+        <image class="signer-item-avatar" src="{{item.avatar}}"></image>
+        <view class="signer-item-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<mini-player wx:if="{{player}}" player="{{player}}"></mini-player>

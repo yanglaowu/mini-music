@@ -1,0 +1,27 @@
+/* pages/signer/index.wxss */
+.container-view {
+  padding: 0 15px;
+  color: white;
+  background: linear-gradient(#ED231F,#281718, #231616);
+}
+.hot-search {
+  margin-bottom: 10px;
+}
+.signer-item {
+  width: 30%;
+  height: 100px;
+  display: inline-block;
+  padding: 10px 1.6%
+}
+.signer-item-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.signer-item-name {
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#ED231F",
+  "navigationBarTextStyle": "white",
+  "disableScroll": true,
+  "usingComponents": {
+    "i-search": "../../components/search/index",
+    "mini-player": "../../components/mini-player/index"
+  }
+}

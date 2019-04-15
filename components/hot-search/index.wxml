@@ -1,0 +1,13 @@
+<!--components/hot-search/index.wxml-->
+<view class="hot-key">
+    <view class="hot-key-title">热门搜索</view>
+    <view>
+      <text
+        wx:for="{{hotKey}}"
+        wx:key="index"
+        bind:tap="_handleSelect"
+        data-item="{{item}}"
+        class="hot-item">{{item.k}}
+      </text>
+    </view>
+  </view>

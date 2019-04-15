@@ -1,0 +1,11 @@
+<!--pages/search/index.wxml-->
+<view class="container container-view">
+  <!-- 搜索 -->
+  <view class="hot-search">
+    <i-search value="{{searchValue}}" bind:input="_handleInput"></i-search> 
+  </view>
+  <i-hot wx:if="{{songs.length === 0}}" hotKey="{{hotKey}}" bind:select="_handleAddSearchKey"></i-hot>
+  <i-suggest wx:if="{{songs.length}}" bind:select="_handleAddSearchResult" data="{{songs}}"></i-suggest>
+  
+
+</view>

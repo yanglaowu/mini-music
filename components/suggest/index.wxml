@@ -1,0 +1,17 @@
+<!--components/suggest/index.wxml-->
+<view class="suggest">
+    <view
+      wx:for="{{data}}"
+      wx:key="index"
+      bind:tap="_handleSelect"
+      data-item="{{item}}"
+      class="suggest-item">
+      <view class="suggest-item-icon">
+        <image wx:if="{{item.type === 'signer'}}" src='../../icon/see_user.png'></image>
+        <image wx:if="{{item.type !== 'signer'}}" src="../../icon/see_music.png"></image>
+      </view>
+      <view class="suggest-item-name">
+        {{item.type === 'signer' ? item.singername : item.name + '-' + item.singer }}
+      </view>
+    </view>
+  </view>

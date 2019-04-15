@@ -1,0 +1,16 @@
+/* components/hot-search/index.wxss */
+.hot-key {
+  padding: 10px 0;
+}
+.hot-key-title {
+  margin-bottom: 10px;
+}
+.hot-item {
+  background: #8D1210;
+  border-radius:5px;
+  padding:5px 10px;
+  font-size:12px;
+  margin:0 20px 10px 0;
+  display: inline-block;
+  color: #ccc;
+}

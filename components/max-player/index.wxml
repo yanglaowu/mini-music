@@ -1,0 +1,68 @@
+<!--components/player/index.wxml-->
+<view class="max-player">
+
+  <view class="background">
+    <image style="width:100%;height:100%;" src="{{player.image}}"></image>
+  </view>
+
+  <view class="top" style="margin-top: {{statusBarHeight}}px">
+    <view bind:tap="_handleBack" class="back">
+      <image mode="aspectFit" src="../../icon/fanhui@2x.png"></image>
+    </view>
+    <view class="title">{{player.name}}</view>
+    <!-- <view class="subtitle">{{player.singer}}</view> -->
+  </view>
+
+  <view class="middle" style="top: {{statusBarHeight + 80}}px">
+    <view class="middle-l">
+      <view class="cd-wrapper">
+        <view class="cd">
+          <image class="{{ playing ? 'play' : ''}}" src="{{player.image}}"></image>
+        </view>
+      </view>
+      <view class="player-info">
+        <view class="signer-name">{{player.name}}</view>
+        <view class="player">{{player.singer}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="bottom">
+    <view class="progress-wrapper">
+      <view class="time time-l">{{currentTimStr}}</view>
+      <view class="progress-bar-wrapper">
+        <slider
+          value="{{currentTim}}"
+          style="margin: 0 5px;"
+          disabled
+          max="{{player.duration}}"
+          block-size="12"
+          block-color="#E30B20"
+          activeColor="#E30B20"
+          backgroundColor="#fff">
+        </slider>
+        <!-- <view class="progress-bar">
+          <view class="bar-inner">
+            <view class="progress" style="width:{{10}}px"></view>
+            <view class="progress-btn-wrapper">
+              <view class="progress-btn"></view>
+            </view>
+          </view>
+        </view> -->
+      </view>
+      <view class="time time-r">{{durationStr}}</view>
+    </view>
+    <view class="operators">
+      <view class="icon icon-left">
+        <image bind:tap="_handlePrev" src="../../icon/shangyishou@2x.png"></image>
+      </view>
+      <view class="icon icon-center">
+        <image bind:tap="_handlePlaying" wx:if="{{!playing}}" src="../../icon/bofang@2x.png"></image>
+        <image bind:tap="_handlePause" wx:if="{{playing}}" src="../../icon/zanting@2x.png"></image>
+      </view>
+      <view class="icon icon-right">
+        <image bind:tap="_handleNext" src="../../icon/xiayishou@2x.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

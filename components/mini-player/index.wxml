@@ -1,0 +1,4 @@
+<!--components/mini-player/index.wxml-->
+<view class="mini-player" bind:tap="_handleView">
+  <image src="{{player.image}}"></image>
+</view>
